@@ -1,0 +1,6 @@
+{
+  "name": "UnreadIQ — What Did I Miss?",
+  "description": "Instant deterministic transcript analyzer for chaotic chats. Extracts decisions, action items, deadlines, urgent blockers, and mentions 100% locally in your browser.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
