@@ -132,16 +132,28 @@ export function isSystemMessage(text: string): boolean {
   const lower = text.toLowerCase().trim();
   const systemPatterns = [
     /\bjoined using this link\b/i,
-    /\badded\s+[\w\s@\+\d]+\b/i,
-    /\bleft the group\b/i,
-    /\bchanged the group (?:description|icon|subject|settings)\b/i,
+    /\b(?:joined|left)\s+(?:the\s+)?group\b/i,
+    /\b[\w\s@\+\d-]+\s+(?:joined|left)\b/i,
+    /\b[\w\s@\+\d-]+\s+added\s+[\w\s@\+\d-]+\b/i,
+    /\badded\s+[\w\s@\+\d-]+\b/i,
+    /\b(?:was|were)\s+added\b/i,
+    /\b(?:was|were)\s+removed\b/i,
+    /\b[\w\s@\+\d-]+\s+removed\s+[\w\s@\+\d-]+\b/i,
+    /\bgroup description changed\b/i,
+    /\bchanged\s+(?:the\s+)?group\s+(?:description|icon|subject|settings|name)\b/i,
+    /\bgroup (?:icon|name|settings|subject) (?:was )?changed\b/i,
     /\bcreated group\b/i,
+    /\bcreated this group\b/i,
     /\bsecurity code changed\b/i,
     /\bmessages and calls are end-to-end encrypted\b/i,
     /\bwaiting for this message\b/i,
     /\bthis message was deleted\b/i,
     /\byou deleted this message\b/i,
     /\bmissed (?:voice|video) call\b/i,
+    /\byou're now an admin\b/i,
+    /\bnow an admin\b/i,
+    /\bdisappearing messages were\b/i,
+    /\bturned on disappearing messages\b/i,
   ];
 
   for (const p of systemPatterns) {

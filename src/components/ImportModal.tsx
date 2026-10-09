@@ -287,11 +287,11 @@ export const ImportModal: React.FC<ImportModalProps> = ({
             />
           </div>
 
-          <div className="p-2.5 bg-[#0d1622] border border-[#192738] rounded-lg flex items-center gap-2 text-[11px] text-[#708499]">
-            <ShieldCheck className="w-4 h-4 text-[#2481cc] shrink-0" />
-            <span>
-              Zip extraction and transcript parsing execute 100% locally in your browser memory.
-            </span>
+          <div className="p-2.5 bg-[#0d1622] border border-[#192738] rounded-lg flex items-start gap-2 text-[11px] text-[#708499]">
+            <ShieldCheck className="w-4 h-4 text-[#2481cc] shrink-0 mt-0.5" />
+            <div>
+              <span className="text-[#a8c4de] font-semibold">Automatic System Message Cleaning:</span> System membership events (e.g., &ldquo;joined using link&rdquo;, &ldquo;added/removed&rdquo;, &ldquo;group description changed&rdquo;, encryption notes) are automatically pruned from the conversation feed and action items.
+            </div>
           </div>
         </div>
 
